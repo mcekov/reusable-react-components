@@ -1,0 +1,9 @@
+@use "_variables";
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+button > svg {
+  margin-right: 5px;
+}
