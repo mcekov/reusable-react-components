@@ -4,8 +4,8 @@ import AccordionPage from './components/pages/AccordionPage'
 import DropdownPage from './components/pages/DropdownPage'
 import Buttonpage from './components/pages/ButtonPage'
 import ModalPage from './components/pages/ModalPage'
-import Table from './components/Table'
 import TablePage from './components/pages/TablePage'
+import CounterPage from './components/pages/CounterPage'
 
 const App = () => {
   return (
@@ -30,6 +30,10 @@ const App = () => {
 
         <Route path="/table">
           <TablePage />
+        </Route>
+
+        <Route path="/counter">
+          <CounterPage initialCount={42} />
         </Route>
       </div>
     </div>
