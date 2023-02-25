@@ -43,7 +43,7 @@ const TablePage = () => {
       <h2>Unsorted Table</h2>
 
       <Table data={data} config={config} keyFn={keyFn} />
-      <hr class="border-2 border-grey-500 my-10" />
+      <hr className="border-2 border-grey-500 my-10" />
       <SortableTable data={data} config={config} keyFn={keyFn} />
     </div>
   )

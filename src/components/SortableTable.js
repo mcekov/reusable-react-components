@@ -1,88 +1,49 @@
-import React, { useState } from "react";
-import Table from "./Table";
+import React from 'react'
+import { RxCaretDown, RxCaretUp, RxCaretSort } from 'react-icons/rx'
+import Table from './Table'
 
-import { RxCaretDown, RxCaretUp, RxCaretSort } from "react-icons/rx";
-import { GoDash } from "react-icons/go";
+import useSort from '../hooks/use-sort'
 
 const SortableTable = (props) => {
-	const [sortOrder, setSortOrder] = useState(null);
-	const [sortBy, setSortBy] = useState(null);
+  const { config, data } = props
+  const { sortBy, sortOrder, sortedData, setSortColumn } = useSort(data, config)
 
-	const { config, data } = props;
+  const updatedConfig = config.map((column) => {
+    if (!column.sortValue) {
+      return column
+    }
 
-	const handleClick = (label) => {
-		if (sortBy && label !== sortBy) {
-			setSortOrder("asc");
-			setSortBy(label);
-			return;
-		}
+    return {
+      ...column,
+      header: () => (
+        <th
+          className="cursor-pointer hover:bg-gray-100"
+          onClick={() => setSortColumn(column.label)}
+        >
+          <div className="flex items-center">
+            {getIcons(column.label, sortBy, sortOrder)}
+            {column.label}
+          </div>
+        </th>
+      ),
+    }
+  })
 
-		if (sortOrder === null) {
-			setSortOrder("asc");
-			setSortBy(label);
-		} else if (sortOrder === "asc") {
-			setSortOrder("desc");
-			setSortBy(label);
-		} else if (sortOrder === "desc") {
-			setSortOrder(null);
-			setSortBy(null);
-		}
-	};
-
-	const updatedConfig = config.map((column) => {
-		if (!column.sortValue) {
-			return column;
-		}
-
-		return {
-			...column,
-			header: () => (
-				<th
-					className="cursor-pointer hover:bg-gray-100"
-					onClick={() => handleClick(column.label)}
-				>
-					<div className="flex items-center">
-						{getIcons(column.label, sortBy, sortOrder)}
-						{column.label}
-					</div>
-				</th>
-			),
-		};
-	});
-
-	let sortedData = data;
-	if (sortOrder && sortBy) {
-		const { sortValue } = config.find((column) => column.label === sortBy);
-
-		sortedData = [...data].sort((a, b) => {
-			const valueA = sortValue(a);
-			const valueB = sortValue(b);
-
-			const reverseOrder = sortOrder === "asc" ? 1 : -1;
-
-			if (typeof valueA === "string") {
-				return valueA.localeCompare(valueB) * reverseOrder;
-			} else {
-				return (valueA - valueB) * reverseOrder;
-			}
-		});
-	}
-
-	return <Table {...props} data={sortedData} config={updatedConfig} />;
-};
-
-function getIcons(label, sortBy, sortOrder) {
-	if (label !== sortBy) {
-		return <RxCaretSort />;
-	}
-
-	if (sortOrder === null) {
-		return <RxCaretSort />;
-	} else if (sortOrder === "asc") {
-		return <RxCaretUp />;
-	} else if (sortOrder === "desc") {
-		return <RxCaretDown />;
-	}
+  return <Table {...props} data={sortedData} config={updatedConfig} />
 }
 
-export default SortableTable;
+function getIcons(label, sortBy, sortOrder) {
+  if (label !== sortBy) {
+    return <RxCaretSort />
+  }
+
+  if (sortOrder === null) {
+    return <RxCaretSort />
+  } else if (sortOrder === 'asc') {
+    return <RxCaretUp />
+  } else if (sortOrder === 'desc') {
+    return <RxCaretDown />
+  }
+}
+
+export default SortableTable
