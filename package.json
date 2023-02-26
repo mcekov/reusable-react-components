@@ -1,6 +1,7 @@
 {
   "author": "M. Tsekov",
   "version": "1.0.0",
+  "description": "Reusable react components",
   "private": true,
   "scripts": {
     "start": "cross-env PORT=3000 webpack server --progress",
@@ -38,7 +39,6 @@
   },
   "dependencies": {
     "axios": "^1.2.6",
-    "bulma": "^0.9.4",
     "classnames": "^2.3.2",
     "immer": "^9.0.19",
     "json-server": "^0.17.1",
