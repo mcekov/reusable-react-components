@@ -29,7 +29,8 @@ const ModalPage = () => {
   )
 
   return (
-    <div>
+    <>
+    <h1 className="text-2xl font-bold mb-4">Modal</h1>
       <Button primary outline onClick={handleClick}>
         <GoNote />
         Opne Modal
@@ -80,40 +81,8 @@ const ModalPage = () => {
         lectus nec quam iaculis mollis et ac ex. Aliquam lobortis neque eget
         augue blandit eleifend.
       </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in est
-        eget arcu consequat pulvinar sed eu dolor. Nulla sit amet lobortis
-        lacus. Duis eu risus euismod, pretium sem nec, vulputate massa. Ut
-        scelerisque nibh sed nisl faucibus, faucibus ullamcorper urna semper.
-        Donec lectus tortor, aliquam et consectetur in, placerat eu lectus.
-        Quisque bibendum tellus at dignissim commodo. Ut venenatis lorem neque,
-        sed accumsan ex efficitur a. Maecenas et tellus libero. Proin vitae
-        lectus nec quam iaculis mollis et ac ex. Aliquam lobortis neque eget
-        augue blandit eleifend.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in est
-        eget arcu consequat pulvinar sed eu dolor. Nulla sit amet lobortis
-        lacus. Duis eu risus euismod, pretium sem nec, vulputate massa. Ut
-        scelerisque nibh sed nisl faucibus, faucibus ullamcorper urna semper.
-        Donec lectus tortor, aliquam et consectetur in, placerat eu lectus.
-        Quisque bibendum tellus at dignissim commodo. Ut venenatis lorem neque,
-        sed accumsan ex efficitur a. Maecenas et tellus libero. Proin vitae
-        lectus nec quam iaculis mollis et ac ex. Aliquam lobortis neque eget
-        augue blandit eleifend.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in est
-        eget arcu consequat pulvinar sed eu dolor. Nulla sit amet lobortis
-        lacus. Duis eu risus euismod, pretium sem nec, vulputate massa. Ut
-        scelerisque nibh sed nisl faucibus, faucibus ullamcorper urna semper.
-        Donec lectus tortor, aliquam et consectetur in, placerat eu lectus.
-        Quisque bibendum tellus at dignissim commodo. Ut venenatis lorem neque,
-        sed accumsan ex efficitur a. Maecenas et tellus libero. Proin vitae
-        lectus nec quam iaculis mollis et ac ex. Aliquam lobortis neque eget
-        augue blandit eleifend.
-      </p>
-    </div>
+     
+    </>
   )
 }
 

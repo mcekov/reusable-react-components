@@ -63,7 +63,10 @@ const CounterPage = ({ initialCount }) => {
   }
 
   return (
+    <>
+    <h1 className="text-2xl font-bold mb-4">Counter</h1>
     <Panel className="m-3">
+
       <h1 className="text-lg">Count is {state.count}</h1>
       <div className="flex flex-row">
         <Button className="mr-2" success onClick={incrementCounter}>
@@ -85,6 +88,7 @@ const CounterPage = ({ initialCount }) => {
         <Button>Add it!</Button>
       </form>
     </Panel>
+    </>
   )
 }
 

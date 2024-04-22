@@ -24,9 +24,9 @@ const items = [
 
 const AccordionPage = () => {
   return (
-    <div>
+    <>
       <Accordion items={items} />
-    </div>
+    </>
   )
 }
 

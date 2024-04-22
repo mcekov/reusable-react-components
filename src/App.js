@@ -6,6 +6,7 @@ import Buttonpage from './components/pages/ButtonPage'
 import ModalPage from './components/pages/ModalPage'
 import TablePage from './components/pages/TablePage'
 import CounterPage from './components/pages/CounterPage'
+import TagInput from './components/pages/TagPage'
 
 const App = () => {
   return (
@@ -34,6 +35,10 @@ const App = () => {
 
         <Route path="/counter">
           <CounterPage initialCount={42} />
+        </Route>
+
+        <Route path="/tag">
+          <TagInput initialCount={42} />
         </Route>
       </div>
     </div>

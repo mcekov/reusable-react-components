@@ -4,6 +4,8 @@ import Button from '../Button'
 
 const ButtonPage = () => {
   return (
+    <>
+    <h1 className="text-2xl font-bold mb-4">Buttons</h1>
     <div className="flex">
       <div>
         <Button primary outline className="mr-2">
@@ -32,6 +34,7 @@ const ButtonPage = () => {
         </Button>
       </div>
     </div>
+    </>
   )
 }
 

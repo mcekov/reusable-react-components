@@ -75,7 +75,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['*', '.tsx', '.ts', '.js', '.jsx'],
+    extensions: ['.*', '.tsx', '.ts', '.js', '.jsx'],
   },
 
   devtool: 'source-map',

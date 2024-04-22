@@ -28,9 +28,10 @@ const DropdownPage = () => {
   }
 
   return (
-    <div className="flex">
+    <>
+    <h1 className="text-2xl font-bold mb-4">Dropdown</h1>
       <Dropdown value={selection} onChange={handleSelect} options={options} />
-    </div>
+    </>
   )
 }
 

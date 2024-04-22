@@ -40,10 +40,11 @@ const keyFn = (fruit) => {
 const TablePage = () => {
   return (
     <div>
-      <h2>Unsorted Table</h2>
-
+      <h2 className='mb-3 text-2xl font-bold'>Table</h2>
       <Table data={data} config={config} keyFn={keyFn} />
       <hr className="border-2 border-grey-500 my-10" />
+
+      <h2 className='mb-3 text-2xl font-bold'>Sortable Table</h2>
       <SortableTable data={data} config={config} keyFn={keyFn} />
     </div>
   )
