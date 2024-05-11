@@ -2,12 +2,13 @@ import React from 'react'
 import Table from '../Table'
 import SortableTable from '../SortableTable'
 
+
 const data = [
-  { name: 'Orange', color: 'bg-orange-500', score: 2, price: 123 },
-  { name: 'Apple', color: 'bg-red-500', score: 3, price: 42 },
-  { name: 'Banana', color: 'bg-yellow-500', score: 5, price: 69 },
-  { name: 'Lime', color: 'bg-green-500', score: 4, price: 12 },
-  { name: 'Chery', color: 'bg-red-500', score: 10, price: 121 },
+  { id: "f3175a20-bf13-4050-8df0-05fa6592cb61", name: 'Orange', color: 'bg-orange-500', score: 2, price: 123 },
+  { id: "0a8de762-68e6-44c8-bd4d-98b4d00c5b6d", name: 'Apple', color: 'bg-red-500', score: 3, price: 42 },
+  { id: "4da5c414-12f2-40c7-ab00-542dae44c98f", name: 'Banana', color: 'bg-yellow-500', score: 5, price: 69 },
+  { id: "0a8de762-68e6-44c8-bd4d-98b4d00a65s4", name: 'Lime', color: 'bg-green-500', score: 4, price: 12 },
+  { id: "53182a49-4168-4265-97fe-0c79416f2635", name: 'Chery', color: 'bg-red-500', score: 10, price: 121 },
 ]
 
 const config = [
@@ -34,7 +35,8 @@ const config = [
 ]
 
 const keyFn = (fruit) => {
-  return fruit.name
+  console.log(fruit);
+  return fruit.id
 }
 
 const TablePage = () => {

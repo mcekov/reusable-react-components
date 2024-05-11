@@ -8,8 +8,10 @@ const Table = ({ data, config, keyFn }) => {
     }
 
     return <th key={column.label}>{column.label}</th>
+
   })
 
+  /* Rows and Cols */
   const renderedRows = data.map((rowData) => {
     const renderedCells = config.map((column) => {
       return (
@@ -19,6 +21,7 @@ const Table = ({ data, config, keyFn }) => {
       )
     })
 
+    /* Table */
     return (
       <tr key={keyFn(rowData)} className="border-b">
         {renderedCells}
