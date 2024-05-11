@@ -30,7 +30,7 @@ const ModalPage = () => {
 
   return (
     <>
-    <h1 className="text-2xl font-bold mb-4">Modal</h1>
+      <h1 className="text-2xl font-bold mb-4">Modal</h1>
       <Button primary outline onClick={handleClick}>
         <GoNote />
         Opne Modal
@@ -81,7 +81,7 @@ const ModalPage = () => {
         lectus nec quam iaculis mollis et ac ex. Aliquam lobortis neque eget
         augue blandit eleifend.
       </p>
-     
+
     </>
   )
 }
